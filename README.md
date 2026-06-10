@@ -6,7 +6,7 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/e--commerce-WooCommerce%20%2B%20Next.js-1F4A7D?style=flat-square&logo=woocommerce&logoColor=white" alt="E-commerce">
+  <a href="https://dev.petaladourada.com.br"><img src="https://img.shields.io/badge/Demo-dev.petaladourada.com.br-1F4A7D?style=flat-square&logo=googlechrome&logoColor=white" alt="Demo"></a>
   <img src="https://img.shields.io/badge/source-private-555555?style=flat-square&logo=github&logoColor=white" alt="Source private">
 </p>
 
