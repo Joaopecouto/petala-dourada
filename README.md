@@ -66,7 +66,7 @@ O catálogo é organizado por categorias que podem ter subcategorias, criadas no
 - Categoria, tag e coleção são nativos do Medusa e filtram as listagens (produtos, categorias, novidades, busca).
 - Cor e tamanho são opções do produto. A cor guarda o código hexadecimal em metadados para pintar a amostra, e o admin ganha um seletor de cor.
 - Só produtos publicados aparecem na vitrine, e a disponibilidade fica amarrada a um canal de venda.
-- Esgotado vem do estoque por variante.
+- O status de esgotado vem do estoque por variante.
 - O plano prevê 11 produtos por enquanto, com SKU por produto e por variante.
 
 #### Avaliações
@@ -91,7 +91,7 @@ O checkout segue as etapas sacola, informações, frete, pagamento e sucesso. A 
 
 A área de conta cobre pedidos, favoritos, endereços, perfil, preferências, privacidade e devoluções.
 
-- Login com e-mail e senha e com Google, com verificação de e-mail obrigatória no cadastro.
+- O login é com e-mail e senha ou com Google, e o cadastro exige verificação de e-mail.
 - Pedidos e devoluções vêm dos módulos Order e Return do Medusa, o que sustenta trocas e devoluções.
 - Favoritos não existem no Medusa, então viram um módulo próprio ligado ao cliente e ao produto.
 - A tela de privacidade prevê exportar e excluir dados, com uma carência para a exclusão.
@@ -121,10 +121,10 @@ flowchart TB
   ADM[Admin estendido] --> M
 ```
 
-- Módulos nativos: produto, preço, estoque, carrinho, pedido, cliente, autenticação, pagamento, frete, promoções e notificações.
-- Módulos próprios: homepage, banner, look, review, wishlist, content, store_settings e product_extra, ligados ao catálogo por links entre módulos.
-- Redis é recomendado para workflows, eventos e cache. E-mails transacionais usam o Resend.
-- Região única (Brasil), moeda única (BRL) e um canal de venda.
+- Os módulos nativos são produto, preço, estoque, carrinho, pedido, cliente, autenticação, pagamento, frete, promoções e notificações.
+- Os módulos próprios são homepage, banner, look, review, wishlist, content, store_settings e product_extra, ligados ao catálogo por links entre módulos.
+- O Redis é recomendado para workflows, eventos e cache, e os e-mails transacionais usam o Resend.
+- A loja tem uma região única (Brasil), uma moeda única (BRL) e um canal de venda.
 
 ### Decisões de engenharia
 
@@ -142,6 +142,6 @@ flowchart TB
 - A tradução do admin nativo para português ainda estava como pesquisa a fazer.
 - Analytics (GA4 e Meta Pixel) e a aceitação de CPF e CNPJ no mesmo cadastro estavam marcados como a confirmar.
 - O prazo de 7 dias para trocas e devoluções não aparece nos arquivos do plano.
-- WhatsApp fica como "em breve", apenas com o aceite de contato.
+- O WhatsApp fica como "em breve", apenas com o aceite de contato.
 
 <sub>Contato: <a href="https://joaocouto.alcetus.com">joaocouto.alcetus.com</a> · <a href="mailto:joaopecouto77@gmail.com">joaopecouto77@gmail.com</a></sub>

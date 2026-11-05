@@ -66,7 +66,7 @@ The catalog is organized by categories that can have subcategories, created in t
 - Category, tag and collection are native to Medusa and filter the listings (products, categories, new arrivals, search).
 - Color and size are product options. Color stores its hexadecimal code in metadata to paint the swatch, and the admin gains a color picker.
 - Only published products appear on the storefront, and availability is tied to a sales channel.
-- Sold out comes from per-variant stock.
+- The sold-out status comes from per-variant stock.
 - The plan covers 11 products for now, with a SKU per product and per variant.
 
 #### Reviews
@@ -91,7 +91,7 @@ Checkout follows the steps bag, details, shipping, payment and success. The cart
 
 The account area covers orders, favorites, addresses, profile, preferences, privacy and returns.
 
-- Email and password login plus Google, with mandatory email verification at sign-up.
+- Login works with email and password or with Google, and sign-up requires email verification.
 - Orders and returns come from Medusa's Order and Return modules, which supports exchanges and returns.
 - Favorites do not exist in Medusa, so they become a custom module linked to customer and product.
 - The privacy screen plans data export and deletion, with a grace period before deletion.
@@ -121,10 +121,10 @@ flowchart TB
   ADM[Extended admin] --> M
 ```
 
-- Native modules: product, pricing, inventory, cart, order, customer, auth, payment, fulfillment, promotions and notifications.
-- Custom modules: homepage, banner, look, review, wishlist, content, store_settings and product_extra, linked to the catalog through module links.
-- Redis is recommended for workflows, events and cache. Transactional email uses Resend.
-- A single region (Brazil), a single currency (BRL) and one sales channel.
+- The native modules are product, pricing, inventory, cart, order, customer, auth, payment, fulfillment, promotions and notifications.
+- The custom modules are homepage, banner, look, review, wishlist, content, store_settings and product_extra, linked to the catalog through module links.
+- Redis is recommended for workflows, events and cache, and transactional email uses Resend.
+- The store has a single region (Brazil), a single currency (BRL) and one sales channel.
 
 ### Engineering decisions
 
@@ -142,6 +142,6 @@ flowchart TB
 - Translating the native admin to Portuguese was still listed as research to do.
 - Analytics (GA4 and Meta Pixel) and accepting both CPF and CNPJ in the same sign-up were marked as to be confirmed.
 - The 7-day window for exchanges and returns does not appear in the plan files.
-- WhatsApp is marked "coming soon", with opt-in only.
+- WhatsApp is marked "coming soon", and only the contact opt-in exists.
 
 <sub>Contact: <a href="https://joaocouto.alcetus.com">joaocouto.alcetus.com</a> · <a href="mailto:joaopecouto77@gmail.com">joaopecouto77@gmail.com</a></sub>
