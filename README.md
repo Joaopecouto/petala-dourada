@@ -5,7 +5,7 @@
 <p align="center">E-commerce de moda feminina, do design ao deploy.<br><sub><i>Women's fashion e-commerce, from design to deployment.</i></sub></p>
 
 <p align="center">
-  <kbd><img src="https://raw.githubusercontent.com/Joaopecouto/Joaopecouto/main/assets/icons/v2/wordpress.svg" height="18" align="absmiddle" alt=""> WordPress</kbd> <kbd><img src="https://raw.githubusercontent.com/Joaopecouto/Joaopecouto/main/assets/icons/v2/woocommerce.svg" height="18" align="absmiddle" alt=""> WooCommerce</kbd> <kbd><img src="https://raw.githubusercontent.com/Joaopecouto/Joaopecouto/main/assets/icons/v2/elementor.svg" height="18" align="absmiddle" alt=""> Elementor</kbd> <kbd><img src="https://raw.githubusercontent.com/Joaopecouto/Joaopecouto/main/assets/icons/v2/nextjs.svg" height="18" align="absmiddle" alt=""> Next.js</kbd> <kbd><img src="https://raw.githubusercontent.com/Joaopecouto/Joaopecouto/main/assets/icons/v2/react.svg" height="18" align="absmiddle" alt=""> React</kbd> <kbd><img src="https://raw.githubusercontent.com/Joaopecouto/Joaopecouto/main/assets/icons/v2/typescript.svg" height="18" align="absmiddle" alt=""> TypeScript</kbd> <kbd><img src="https://raw.githubusercontent.com/Joaopecouto/Joaopecouto/main/assets/icons/v2/postgresql.svg" height="18" align="absmiddle" alt=""> PostgreSQL</kbd> <kbd><img src="https://raw.githubusercontent.com/Joaopecouto/Joaopecouto/main/assets/icons/v2/docker.svg" height="18" align="absmiddle" alt=""> Docker</kbd>
+  <kbd><img src="https://raw.githubusercontent.com/Joaopecouto/Joaopecouto/main/assets/icons/v2/nextjs.svg" height="18" align="absmiddle" alt=""> Next.js</kbd> <kbd><img src="https://raw.githubusercontent.com/Joaopecouto/Joaopecouto/main/assets/icons/v2/react.svg" height="18" align="absmiddle" alt=""> React</kbd> <kbd><img src="https://raw.githubusercontent.com/Joaopecouto/Joaopecouto/main/assets/icons/v2/typescript.svg" height="18" align="absmiddle" alt=""> TypeScript</kbd> <kbd><img src="https://raw.githubusercontent.com/Joaopecouto/Joaopecouto/main/assets/icons/v2/wordpress.svg" height="18" align="absmiddle" alt=""> WordPress</kbd> <kbd><img src="https://raw.githubusercontent.com/Joaopecouto/Joaopecouto/main/assets/icons/v2/woocommerce.svg" height="18" align="absmiddle" alt=""> WooCommerce</kbd> <kbd><img src="https://raw.githubusercontent.com/Joaopecouto/Joaopecouto/main/assets/icons/v2/elementor.svg" height="18" align="absmiddle" alt=""> Elementor</kbd>
 </p>
 
 <p align="center"><a href="#portugu%C3%AAs"><b>Português</b></a> &nbsp;|&nbsp; <a href="#english"><b>English</b></a></p>
@@ -25,7 +25,7 @@
 
 ### Visão geral
 
-A Pétala Dourada é uma loja de moda feminina. Hoje a loja em produção roda em WordPress com WooCommerce e Elementor, e existe uma demonstração em ambiente de desenvolvimento. Em paralelo, a loja está sendo reescrita com Next.js 16, React 19, um backend Medusa v2 e PostgreSQL.
+A Pétala Dourada é uma loja de moda feminina. A versão atual está no ar no ambiente de demonstração e roda em Next.js e React. A loja anterior foi feita em WordPress com WooCommerce e Elementor, e o plano de migração prevê um backend Medusa v2 com PostgreSQL.
 
 A reescrita já tem o front-end completo, da vitrine ao checkout e à conta da cliente, ainda alimentado por dados de exemplo. O documento de arquitetura (PLANO-MEDUSA, em Markdown e em HTML) define como cada página passa a ler dados do Medusa. O backend ainda não foi escrito.
 
@@ -58,6 +58,14 @@ flowchart LR
 
 O catálogo é organizado por categorias que podem ter subcategorias, criadas no admin, sem árvore fixa. A página de produto reúne galeria, preço com "de/por", parcelas, cor, tamanho, frete, estoque e avaliações.
 
+<p align="center"><img src="./assets/screens/mobile-produto-variantes.png" alt="Seleção de tamanho e botão de compra na versão mobile." width="92%"><br><sub>Seleção de tamanho e botão de compra na versão mobile.</sub></p>
+
+<p align="center"><img src="./assets/screens/produto-dobra.jpg" alt="Página de produto: preço com desconto, parcelas, frete, cor e tamanho." width="92%"><br><sub>Página de produto: preço com desconto, parcelas, frete, cor e tamanho.</sub></p>
+
+<p align="center"><img src="./assets/screens/categoria-vestidos-dobra.jpg" alt="Categoria Vestidos Longos, com filtros de promoção, tamanho e cor e preço "de/por"." width="92%"><br><sub>Categoria Vestidos Longos, com filtros de promoção, tamanho e cor e preço "de/por".</sub></p>
+
+<p align="center"><img src="./assets/screens/home-dobra.jpg" alt="Home da loja: cabeçalho com busca, banner principal, faixa promocional e selos de garantia." width="92%"><br><sub>Home da loja: cabeçalho com busca, banner principal, faixa promocional e selos de garantia.</sub></p>
+
 - Categoria, tag e coleção são nativos do Medusa e filtram as listagens (produtos, categorias, novidades, busca).
 - Cor e tamanho são opções do produto. A cor guarda o código hexadecimal em metadados para pintar a amostra, e o admin ganha um seletor de cor.
 - Só produtos publicados aparecem na vitrine, e a disponibilidade fica amarrada a um canal de venda.
@@ -74,6 +82,8 @@ O Medusa não traz avaliações, então o plano cria um módulo próprio. Cada a
 #### Carrinho e checkout
 
 O checkout segue as etapas sacola, informações, frete, pagamento e sucesso. A interface do carrinho continua igual, e só muda a fonte dos dados.
+
+<p align="center"><img src="./assets/screens/carrinho.png" alt="Carrinho com um item, subtotal, previsão de entrega e sugestões de produtos." width="92%"><br><sub>Carrinho com um item, subtotal, previsão de entrega e sugestões de produtos.</sub></p>
 
 - O parcelamento máximo (por exemplo 12x) é uma configuração da loja.
 - O frete por CEP vem de opções de envio do Medusa. O plano prevê um provedor próprio ligado à API da Entrega Fácil.
@@ -147,7 +157,7 @@ flowchart TB
 
 ### Overview
 
-Pétala Dourada is a women's fashion store. The store in production today runs on WordPress with WooCommerce and Elementor, and a demo exists on a development environment. In parallel, the store is being rewritten with Next.js 16, React 19, a Medusa v2 backend and PostgreSQL.
+Pétala Dourada is a women's fashion store. The current version is live on the demo environment and runs on Next.js and React. The previous store was built on WordPress with WooCommerce and Elementor, and the migration plan calls for a Medusa v2 backend with PostgreSQL.
 
 The rewrite already has the complete front end, from storefront to checkout to the customer account, still fed by sample data. The architecture document (PLANO-MEDUSA, in Markdown and HTML) defines how each page will read data from Medusa. The backend has not been written yet.
 
@@ -180,6 +190,14 @@ flowchart LR
 
 The catalog is organized by categories that can have subcategories, created in the admin, with no fixed tree. The product page brings together gallery, price with "from/to", installments, color, size, shipping, stock and reviews.
 
+<p align="center"><img src="./assets/screens/mobile-produto-variantes.png" alt="Size selection and buy button on mobile." width="92%"><br><sub>Size selection and buy button on mobile.</sub></p>
+
+<p align="center"><img src="./assets/screens/produto-dobra.jpg" alt="Product page: discounted price, installments, shipping, color and size." width="92%"><br><sub>Product page: discounted price, installments, shipping, color and size.</sub></p>
+
+<p align="center"><img src="./assets/screens/categoria-vestidos-dobra.jpg" alt="Long Dresses category, with promotion, size and color filters and "from/to" prices." width="92%"><br><sub>Long Dresses category, with promotion, size and color filters and "from/to" prices.</sub></p>
+
+<p align="center"><img src="./assets/screens/home-dobra.jpg" alt="Store home: header with search, main banner, promo strip and trust badges." width="92%"><br><sub>Store home: header with search, main banner, promo strip and trust badges.</sub></p>
+
 - Category, tag and collection are native to Medusa and filter the listings (products, categories, new arrivals, search).
 - Color and size are product options. Color stores its hexadecimal code in metadata to paint the swatch, and the admin gains a color picker.
 - Only published products appear on the storefront, and availability is tied to a sales channel.
@@ -196,6 +214,8 @@ Medusa has no reviews, so the plan creates a custom module. Each review has a ra
 #### Cart and checkout
 
 Checkout follows the steps bag, details, shipping, payment and success. The cart interface stays the same, and only the data source changes.
+
+<p align="center"><img src="./assets/screens/carrinho.png" alt="Cart with one item, subtotal, delivery estimate and product suggestions." width="92%"><br><sub>Cart with one item, subtotal, delivery estimate and product suggestions.</sub></p>
 
 - The maximum installment count (for example 12x) is a store setting.
 - Shipping by ZIP code comes from Medusa shipping options. The plan calls for a custom provider connected to the Entrega Fácil API.
