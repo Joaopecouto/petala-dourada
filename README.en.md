@@ -22,13 +22,13 @@
 
 ### Overview
 
-Pétala Dourada is a women's fashion store. The current version is live on the demo environment and runs on Next.js and React. The previous store was built on WordPress with WooCommerce and Elementor, and the migration plan calls for a Medusa v2 backend with PostgreSQL.
+Pétala Dourada is a women's fashion store. The current version is already live on the demo environment and runs on Next.js and React. The previous store was built on WordPress with WooCommerce and Elementor, and the migration plan calls for a Medusa v2 backend with PostgreSQL.
 
-The rewrite already has the complete front end, from storefront to checkout to the customer account, still fed by sample data. The architecture document (PLANO-MEDUSA, in Markdown and HTML) defines how each page will read data from Medusa. The backend has not been written yet.
+The rewrite already has the complete front end, from storefront to checkout to the customer account, still fed by sample data. The architecture document (PLANO-MEDUSA, in Markdown and HTML) defines how each page will read data from Medusa. The backend hasn't been written yet.
 
 ### How it works
 
-The flow below describes the new store as the plan designs it.
+The flow below describes the new store the way the plan lays it out.
 
 1. The customer browses the storefront: home, categories, search and product. Next.js reads products, categories and prices through the Medusa Store API.
 2. On the product page, she picks color and size. Each combination is a variant with its own price and stock, and changing color changes the photo gallery.

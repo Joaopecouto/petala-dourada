@@ -22,13 +22,13 @@
 
 ### Visão geral
 
-A Pétala Dourada é uma loja de moda feminina. A versão atual está no ar no ambiente de demonstração e roda em Next.js e React. A loja anterior foi feita em WordPress com WooCommerce e Elementor, e o plano de migração prevê um backend Medusa v2 com PostgreSQL.
+A Pétala Dourada é uma loja de moda feminina. A versão atual já está no ar no ambiente de demonstração e roda em Next.js e React. A loja anterior foi feita em WordPress com WooCommerce e Elementor, e o plano de migração prevê um backend Medusa v2 com PostgreSQL.
 
-A reescrita já tem o front-end completo, da vitrine ao checkout e à conta da cliente, ainda alimentado por dados de exemplo. O documento de arquitetura (PLANO-MEDUSA, em Markdown e em HTML) define como cada página passa a ler dados do Medusa. O backend ainda não foi escrito.
+A reescrita já tem o front-end completo, da vitrine ao checkout e à conta da cliente, ainda alimentado por dados de exemplo. O documento de arquitetura (PLANO-MEDUSA, em Markdown e em HTML) define como cada página vai passar a ler os dados do Medusa. O backend ainda não foi escrito.
 
 ### Como funciona
 
-O fluxo abaixo descreve a loja nova, como o plano a desenha.
+O fluxo abaixo descreve a loja nova do jeito que o plano a desenha.
 
 1. A cliente navega pela vitrine: home, categorias, busca e produto. O Next.js lê produtos, categorias e preços pela Store API do Medusa.
 2. No produto, ela escolhe cor e tamanho. Cada combinação é uma variante com preço e estoque próprios, e trocar a cor troca a galeria de fotos.
